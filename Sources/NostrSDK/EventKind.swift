@@ -8,7 +8,7 @@
 import Foundation
 
 /// A constant defining the kind of an event.
-public enum EventKind: RawRepresentable, CaseIterable, Codable, Equatable, Hashable {
+public enum EventKind: RawRepresentable, CaseIterable, Codable, Equatable, Hashable, Sendable {
 
     public typealias RawValue = Int
 

@@ -10,7 +10,7 @@ import Foundation
 /// Date-based calendar event starts on a date and ends before a different date in the future.
 /// Its use is appropriate for all-day or multi-day events where time and time zone hold no significance. e.g., anniversary, public holidays, vacation days.
 /// See [NIP-52](https://github.com/nostr-protocol/nips/blob/master/52.md).
-public final class DateBasedCalendarEvent: NostrEvent, CalendarEventInterpreting {
+public final class DateBasedCalendarEvent: NostrEvent, CalendarEventInterpreting, @unchecked Sendable {
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }

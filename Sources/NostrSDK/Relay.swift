@@ -61,7 +61,7 @@ public protocol RelayDelegate: AnyObject {
 }
 
 /// A struct containing a Nostr event and the subscription ID
-public struct RelayEvent {
+public struct RelayEvent: Sendable {
     public let event: NostrEvent
     public let subscriptionId: String
 }

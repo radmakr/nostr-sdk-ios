@@ -10,7 +10,7 @@ import Foundation
 /// An event that contains an uncategorized, "global" list of things a user wants to save.
 ///
 /// See [NIP-51](https://github.com/nostr-protocol/nips/blob/master/51.md#standard-lists).
-public final class BookmarksListEvent: NostrEvent, HashtagInterpreting, PrivateTagInterpreting, ReferenceTagInterpreting, EventCoordinatesTagInterpreting {
+public final class BookmarksListEvent: NostrEvent, HashtagInterpreting, PrivateTagInterpreting, ReferenceTagInterpreting, EventCoordinatesTagInterpreting, @unchecked Sendable {
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }

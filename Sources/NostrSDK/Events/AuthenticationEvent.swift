@@ -11,7 +11,7 @@ import Foundation
 /// This kind is not meant to be published or queried.
 ///
 /// See [NIP-42](https://github.com/nostr-protocol/nips/blob/master/42.md).
-public final class AuthenticationEvent: NostrEvent, RelayProviding {
+public final class AuthenticationEvent: NostrEvent, RelayProviding, @unchecked Sendable {
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }

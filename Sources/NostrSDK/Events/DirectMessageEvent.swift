@@ -17,7 +17,7 @@ import Foundation
 /// If a new `p` tag is added or a current one is removed, a new room is created with clean message history.
 ///
 /// See [NIP-17 - Private Direct Messages](https://github.com/nostr-protocol/nips/blob/master/17.md).
-public final class DirectMessageEvent: NostrEvent, ThreadedEventTagInterpreting {
+public final class DirectMessageEvent: NostrEvent, ThreadedEventTagInterpreting, @unchecked Sendable {
 
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)

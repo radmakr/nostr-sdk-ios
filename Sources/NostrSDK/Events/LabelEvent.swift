@@ -11,7 +11,7 @@ import Foundation
 /// This supports several use cases, including distributed moderation, collection management, license assignment, and content classification.
 ///
 /// See [NIP-32 Labeling](https://github.com/nostr-protocol/nips/blob/master/32.md).
-public final class LabelEvent: NostrEvent {
+public final class LabelEvent: NostrEvent, @unchecked Sendable {
 
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)

@@ -10,7 +10,7 @@ import Foundation
 /// A repost is a kind 6 event that is used to signal to followers that a kind 1 text note is worth reading.
 ///
 /// See [NIP-18](https://github.com/nostr-protocol/nips/blob/master/18.md#reposts).
-public final class TextNoteRepostEvent: GenericRepostEvent {
+public final class TextNoteRepostEvent: GenericRepostEvent, @unchecked Sendable {
     
     override static var kind: EventKind {
         .repost

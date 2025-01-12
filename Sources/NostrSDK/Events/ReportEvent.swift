@@ -29,7 +29,7 @@ public enum ReportType: String {
 /// An event which reports a user or other notes for spam, illegal and explicit content.
 ///
 /// See [NIP-56](https://github.com/nostr-protocol/nips/blob/b4cdc1a73d415c79c35655fa02f5e55cd1f2a60c/56.md#nip-56).
-public final class ReportEvent: NostrEvent {
+public final class ReportEvent: NostrEvent, @unchecked Sendable {
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 /// Time-based calendar event spans between a start time and end time.
-public final class TimeBasedCalendarEvent: NostrEvent, CalendarEventInterpreting {
+public final class TimeBasedCalendarEvent: NostrEvent, CalendarEventInterpreting, @unchecked Sendable {
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }

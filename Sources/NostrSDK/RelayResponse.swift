@@ -21,7 +21,7 @@ fileprivate struct EventKindMapper: Decodable {     // swiftlint:disable:this pr
     }
 }
 
-public enum RelayResponse: Decodable {
+public enum RelayResponse: Decodable, Sendable {
 
     struct CountResponse: Codable {
         let count: Int
@@ -37,7 +37,7 @@ public enum RelayResponse: Decodable {
         case count = "COUNT"
     }
     
-    public struct Message {
+    public struct Message: Sendable {
         public let prefix: MessagePrefix
         public let message: String
 
@@ -59,7 +59,7 @@ public enum RelayResponse: Decodable {
         }
     }
     
-    public enum MessagePrefix: String, Codable {
+    public enum MessagePrefix: String, Codable, Sendable {
         case unknown
         case duplicate
         case pow

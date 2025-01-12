@@ -14,7 +14,7 @@ import Foundation
 ///              * MUST NOT support adding HTML to Markdown.
 ///
 /// > Note: [NIP-23 Specification](https://github.com/nostr-protocol/nips/blob/master/23.md)
-public final class LongformContentEvent: NostrEvent, HashtagInterpreting, ParameterizedReplaceableEvent, TitleTagInterpreting {
+public final class LongformContentEvent: NostrEvent, HashtagInterpreting, ParameterizedReplaceableEvent, TitleTagInterpreting, @unchecked Sendable {
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }

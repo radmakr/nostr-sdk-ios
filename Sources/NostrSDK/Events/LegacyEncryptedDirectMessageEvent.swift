@@ -11,8 +11,8 @@ import Foundation
 ///
 /// > Note: [NIP-04 - Encrypted Direct Message](https://github.com/nostr-protocol/nips/blob/master/04.md)
 /// > Warning: Deprecated in favor of [NIP-17 - Private Direct Messages](https://github.com/nostr-protocol/nips/blob/master/17.md).
-@available(*, deprecated, message: "Deprecated in favor of NIP-17 - Private Direct Messages.")
-public final class LegacyEncryptedDirectMessageEvent: NostrEvent, LegacyDirectMessageEncrypting {
+//@available(*, deprecated, message: "Deprecated in favor of NIP-17 - Private Direct Messages.")
+public final class LegacyEncryptedDirectMessageEvent: NostrEvent, LegacyDirectMessageEncrypting, @unchecked Sendable {
 
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)

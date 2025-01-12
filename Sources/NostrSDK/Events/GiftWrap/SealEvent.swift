@@ -17,7 +17,7 @@ import Foundation
 /// It should be be wrapped in a ``GiftWrapEvent`` before broadcasting it to the recipient's relays.
 ///
 /// See [NIP-59 - Gift Wrap](https://github.com/nostr-protocol/nips/blob/master/59.md).
-public final class SealEvent: NostrEvent, NIP44v2Encrypting {
+public final class SealEvent: NostrEvent, NIP44v2Encrypting, @unchecked Sendable {
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }
